@@ -8,16 +8,7 @@
 import Foundation
 import UIKit
 
-class Button: UIButton {
-    
-    public init() {
-        super.init(frame: .zero)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+class Button {
     func add(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat, color: UIColor?, name: String, label: String) -> UIButton {
         let button = UIButton(type: .system)
         button.frame = CGRect(x: x, y: y, width: w, height: h)
