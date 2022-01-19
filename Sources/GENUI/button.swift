@@ -8,8 +8,13 @@
 import Foundation
 import UIKit
 
-class Button {
-    func add(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat, color: UIColor?, name: String, label: String) -> UIButton {
+public class ButtonUI {
+    
+    public init() {
+        
+    }
+    
+    public func add(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat, color: UIColor?, name: String, label: String) -> UIButton {
         let button = UIButton(type: .system)
         button.frame = CGRect(x: x, y: y, width: w, height: h)
         button.backgroundColor = color ?? UIColor.black
