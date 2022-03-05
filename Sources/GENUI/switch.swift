@@ -8,31 +8,99 @@
 import Foundation
 import UIKit
 
-public class SwitchUI {
+@IBDesignable public class SwitchUI: UIView {
     
-    public init() {
-        
+    private let switchui = UISwitch()
+    private var label = UILabel()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setUp()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setUp()
+    }
+    
+    @IBInspectable var on: Bool = true {
+        didSet {
+            self.refreshUI()
+        }
+    }
+    
+    @IBInspectable var off: Bool = false {
+        didSet {
+            self.refreshUI()
+        }
+    }
+    
+    @IBInspectable var switchColor: UIColor = .white {
+        didSet {
+            self.refreshUI()
+        }
+    }
+    
+    @IBInspectable var switchColorOff: UIColor = .white {
+        didSet {
+            self.refreshUI()
+        }
+    }
+    
+    @IBInspectable var switchColorOn: UIColor = .white {
+        didSet {
+            self.refreshUI()
+        }
+    }
+    
+    @IBInspectable var labelDescription: String = ""{
+        didSet {
+            self.refreshUI()
+        }
+    }
+    
+    @IBInspectable var textColor: UIColor = .black {
+        didSet {
+            self.refreshUI()
+        }
     }
     
     @objc func switchStateDidChange(_ sender: UISwitch) {
         if (sender.isOn == true) {
-                print("ON")
-            } else {
-                print("OFF")
-            }
-    }
-
-    
-    public func add(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat, on: Bool, off: Bool, controller: UIViewController) -> UISwitch {
-        let newSwitch = UISwitch()
-        newSwitch.frame = CGRect(x: x, y: y, width: w, height: h)
-        newSwitch.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
-        newSwitch.setOn(true, animated: false)
-        return newSwitch
+            print("ON")
+        } else {
+            print("OFF")
+        }
     }
     
-    public func changeColor(switchColor: UISwitch, colorOn: UIColor, colorOff: UIColor) {
-        switchColor.tintColor = colorOff
-        switchColor.onTintColor = colorOn
+    private func setUp() {
+            
+        self.subviews.forEach({ subview in
+           subview.removeFromSuperview()
+        })
+        
+        self.frame = CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.size.width, height: self.frame.size.height)
+        self.backgroundColor = .clear
+        let backgroundSwitch = UIView.init(frame: self.frame)
+        backgroundSwitch.backgroundColor = self.switchColor
+        backgroundSwitch.clipsToBounds = true
+        backgroundSwitch.frame = CGRect(x: 0, y: 0, width:  self.frame.size.width, height: bounds.size.height)
+        
+        self.addSubview(backgroundSwitch)
+        
+        switchui.tintColor = self.switchColorOff
+        switchui.onTintColor = self.switchColorOn
+        
+        label.text = self.labelDescription
+        label.textColor = self.textColor
+        label.frame = CGRect(x: 20, y: bounds.size.height / 2 - self.label.frame.size.height / 2 , width: bounds.size.width / 2, height: bounds.size.height)
+        label.numberOfLines = 0
+        self.addSubview(label)
+        
+        self.superview?.addSubview(self)
+    }
+    
+    private func refreshUI() {
+        self.setUp()
     }
 }
