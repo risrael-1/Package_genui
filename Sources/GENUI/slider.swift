@@ -53,6 +53,40 @@ import UIKit
         }
     }
     
+    @IBInspectable var marginRight: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    
+    @IBInspectable var marginTop: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    @IBInspectable var marginBottom: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    @IBInspectable var marginLeft: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+
+    @IBInspectable var height: CGFloat = 200 {
+        didSet {
+            setUp()
+        }
+    }
+    
+    @IBInspectable var width: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    
     private func setUp() {
             
         self.subviews.forEach({ subview in

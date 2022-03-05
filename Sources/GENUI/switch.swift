@@ -65,6 +65,40 @@ import UIKit
         }
     }
     
+    @IBInspectable var marginRight: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    
+    @IBInspectable var marginTop: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    @IBInspectable var marginBottom: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    @IBInspectable var marginLeft: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+
+    @IBInspectable var height: CGFloat = 200 {
+        didSet {
+            setUp()
+        }
+    }
+    
+    @IBInspectable var width: CGFloat = 0 {
+        didSet {
+            setUp()
+        }
+    }
+    
     @objc func switchStateDidChange(_ sender: UISwitch) {
         if (sender.isOn == true) {
             print("ON")
