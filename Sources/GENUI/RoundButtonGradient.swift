@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@dkaminowicz
-risrael-1
-/
-Package_genui
-Public
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-Package_genui/Sources/GENUI/Label.swift
-
-Brosse change public inspectable
-Latest commit e426bb7 3 hours ago
- History
- 0 contributors
-71 lines (51 sloc)  1.68 KB
-   
 import UIKit
 
 @IBDesignable public class Label: UIView {
@@ -100,4 +71,4 @@ import UIKit
         self.setUp()
     }
     
-}
+} 
