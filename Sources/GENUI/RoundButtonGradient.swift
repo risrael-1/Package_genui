@@ -156,10 +156,4 @@ import UIKit
         super.layoutSublayers(of: layer)
         gradientLayer.frame = bounds
     }
-    
-    // MARK: - Layout
-    override func layoutSubviews() {
-        self.setUp()
-        super.layoutSubviews()
-    }
 }
