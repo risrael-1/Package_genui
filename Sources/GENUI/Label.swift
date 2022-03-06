@@ -29,7 +29,7 @@ import UIKit
         }
     }
     
-    @IBInspectable public var labelColor: UIColor = .white {
+    @IBInspectable public var colorBackground: UIColor = .white {
         didSet {
             self.refreshUI()
         }
@@ -52,7 +52,7 @@ import UIKit
         self.frame = CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.size.width, height: self.frame.size.height)
         self.backgroundColor = .clear
         let backgroundTextfield = UIView.init(frame: self.frame)
-        backgroundTextfield.backgroundColor = self.labelColor
+        backgroundTextfield.backgroundColor = self.colorBackground
         backgroundTextfield.clipsToBounds = true
         backgroundTextfield.frame = CGRect(x: 0, y: 0, width:  self.frame.size.width, height: bounds.size.height)
         
@@ -61,11 +61,9 @@ import UIKit
         label.numberOfLines = numberOfLines
         label.textColor = textColor
         
-
         label.frame = self.frame
         self.addSubview(label)
         
-
         self.superview?.addSubview(self)
     }
     
