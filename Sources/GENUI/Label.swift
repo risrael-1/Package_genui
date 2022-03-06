@@ -54,7 +54,7 @@ import UIKit
         let backgroundTextfield = UIView.init(frame: self.frame)
         backgroundTextfield.backgroundColor = self.colorBackground
         backgroundTextfield.clipsToBounds = true
-        backgroundTextfield.frame = CGRect(x: 0, y: 0, width:  self.frame.size.width, height: bounds.size.height)
+        backgroundTextfield.frame = CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.size.width, height: self.frame.size.height)
         
         self.addSubview(backgroundTextfield)
         label.text = text
