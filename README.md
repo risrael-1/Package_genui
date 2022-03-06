@@ -14,6 +14,9 @@ We’ve designed the package to make it really easy to create us elements for de
     * [ViewUI](#viewui)
     * [StepperUI](#stepperui)
     * [SegmentedView](#segmentedview)
+    * [CheckboxUI](#checkboxui)
+    * [SliderUI](#sliderui)
+    * [SwitchUI](#switchui)
 
 ## About Packages
 
@@ -113,27 +116,6 @@ private func setSelectedViewController() {
 }
 ```
 
-### ViewUI
-
-```swift
-var viewUI: ViewUI = ViewUI.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-viewUI.height = UIScreen.main.bounds.height
-viewUI.width = UIScreen.main.bounds.width
-viewUI.radiusCorner = 50
-viewUI.cornerRadiusBottomRight = false
-viewUI.cornerRadiusTopRight = true
-viewUI.cornerRadiusTopLeft = false
-viewUI.cornerRadiusBottomLeft = true
-viewUI.marginTop = 50
-viewUI.marginRight = 30
-viewUI.marginLeft = 30
-viewUI.marginBottom = 20
-viewUI.startColor = UIColor.blue
-viewUI.endColor = UIColor.orange
-self.view.addSubview(viewUI)
-```
-
-![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleViewUI.png)
 
 ### CheckboxUI
 
