@@ -17,6 +17,9 @@ We’ve designed the package to make it really easy to create us elements for de
     * [CheckboxUI](#checkboxui)
     * [SliderUI](#sliderui)
     * [SwitchUI](#switchui)
+    * [Textfield](#textfield)
+    * [Label](#label)
+    * [RoundButtonGradient](#roundbuttongradient)
 
 ## About Packages
 
@@ -168,3 +171,47 @@ private func setSelectedViewController() {
 
 ![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleSwitchUI.png)
 
+### textfield
+
+```swift
+        var textfield = Textfield(frame: CGRect(x: 10, y: 10, width: 300, height: 400))
+        textfield.text = "text »
+        textfield.textfieldColor = UIColor.red
+        textfield.placeholder = "placeholder"
+        textfield.minimumFontSize = 12
+        textfield.textColor = UIColor.blue
+        self.view.addSubview(textfield)
+```
+
+![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleTextfield.png)
+
+[HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleTextfieldPlaceholder.png)
+
+
+### label
+
+```swift
+        var label = Label(frame: CGRect(x: 10, y: 10, width: 300, height: 400))
+        label.text = "test"
+        label.numberOfLines = 1
+        label.textColor = UIColor.blue
+        label.colorBackground = UIColor.red
+        self.view.addSubview(label)
+```
+
+![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleLabel.png)
+
+### roundbuttongradient
+
+```swift
+        var button = RoundButtonGradient(frame: CGRect(x: 10, y: 10, width: 300, height: 400))
+        button.topGradientColor = UIColor.red
+        button.cornerRadius = 20
+        button.bottomGradientColor = UIColor.red
+        button.imageBackground = UIImage.init(named: "image")
+        button.position = .center
+ 
+        self.view.addSubview(button)
+```
+
+![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleRoundButtonGradient.png)
