@@ -15,75 +15,75 @@ import UIKit
     private let stepper = UIStepper()
     private var label = UILabel()
     
-    @IBInspectable var maxValue: Double = 0.0 {
+    @IBInspectable public var maxValue: Double = 0.0 {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var minValue: Double = 0.0 {
+    @IBInspectable public var minValue: Double = 0.0 {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var value: Double = 0.0 {
+    @IBInspectable public var value: Double = 0.0 {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var textColor: UIColor = .black {
+    @IBInspectable public var textColor: UIColor = .black {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var viewColor: UIColor = .white {
+    @IBInspectable public var viewColor: UIColor = .white {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var leftButtonText: String = "-" {
+    @IBInspectable public var leftButtonText: String = "-" {
         didSet {
             leftButton.setTitle(leftButtonText, for: .normal)
         }
     }
     
-    @IBInspectable var leftButtonTextColor: UIColor = .white {
+    @IBInspectable public var leftButtonTextColor: UIColor = .white {
         didSet {
             leftButton.setTitleColor(self.leftButtonTextColor, for: .normal)
             
         }
     }
     
-    @IBInspectable var rightButtonTextColor: UIColor = .white{
+    @IBInspectable public var rightButtonTextColor: UIColor = .white{
         didSet {
             rightButton.setTitleColor(self.rightButtonTextColor, for: .normal)
         }
     }
     
     
-    @IBInspectable var rightButtonText: String = "+"{
+    @IBInspectable public var rightButtonText: String = "+"{
         didSet {
             rightButton.setTitle(rightButtonText, for: .normal)
         }
     }
     
-    @IBInspectable var rightButtonColor: UIColor = .black{
+    @IBInspectable public var rightButtonColor: UIColor = .black{
         didSet {
             rightButton.backgroundColor = rightButtonColor
         }
     }
     
-    @IBInspectable var leftButtonColor: UIColor = .black{
+    @IBInspectable public var leftButtonColor: UIColor = .black{
         didSet {
             leftButton.backgroundColor = leftButtonColor
         }
     }
     
-    @IBInspectable var labelDescription: String = ""{
+    @IBInspectable public var labelDescription: String = ""{
         didSet {
             self.refreshUI()
         }
@@ -126,7 +126,7 @@ import UIKit
     private func setUp() {
         
         self.subviews.forEach({ subview in
-           subview.removeFromSuperview()
+            subview.removeFromSuperview()
         })
         
         self.frame = CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.size.width, height: self.frame.size.height)
