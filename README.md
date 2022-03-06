@@ -27,7 +27,7 @@ A package consists of Swift source files, including the `Package.swift` manifest
 
 ### ViewUI
 
-```objective-c
+```swift
 var viewUI: ViewUI = ViewUI()
 viewUI.height = UIScreen.main.bounds.height
 viewUI.width = UIScreen.main.bounds.width
@@ -66,7 +66,7 @@ You can implement the elements in the .xib like the example below
 
 after adding a view in your xib, You can use this implementation for the segmentedView
 
-```objective-c
+```swift
 enum stepSegment: Int {
     case step1 = 0
     case step2 = 1
@@ -79,7 +79,7 @@ var selectedSegment: stepSegment = .step1
 ```
 ***
 
-```objective-c
+```swift
 var viewControllers: [UIViewController?] = []
 
 let segmentedViewController = SegmentedViewController()
@@ -107,8 +107,82 @@ self.setSelectedViewController()
 ```
 ***
 
-```objective-c
+```swift
 private func setSelectedViewController() {
     self.segmentedViewController.setSelectedViewController(at: self.selectedSegment.rawValue)
 }
 ```
+
+### ViewUI
+
+```swift
+var viewUI: ViewUI = ViewUI.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+viewUI.height = UIScreen.main.bounds.height
+viewUI.width = UIScreen.main.bounds.width
+viewUI.radiusCorner = 50
+viewUI.cornerRadiusBottomRight = false
+viewUI.cornerRadiusTopRight = true
+viewUI.cornerRadiusTopLeft = false
+viewUI.cornerRadiusBottomLeft = true
+viewUI.marginTop = 50
+viewUI.marginRight = 30
+viewUI.marginLeft = 30
+viewUI.marginBottom = 20
+viewUI.startColor = UIColor.blue
+viewUI.endColor = UIColor.orange
+self.view.addSubview(viewUI)
+```
+
+![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleViewUI.png)
+
+### CheckboxUI
+
+```swift
+    let check = CheckBox(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    check.colorCheck = .blue
+    check.isChecked = true
+    check.colorUnCheck = .brown
+    check.isImageFill = false
+    self.view.addSubview(check)
+```
+
+![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleCheckBoxUI.png)
+
+
+### SliderUI
+
+```swift
+    let slider = SliderUI(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    slider.minValue = 0
+    slider.maxValue = 60
+    slider.sliderColor = .blue
+    slider.marginLeft = 10.0
+    slider.marginRight = 10.0
+    slider.marginTop = 10
+    slider.marginBottom = 50
+    slider.height = 20
+    slider.width = 50
+    self.view.addSubview(slider)
+```
+![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleSliderUI.png)
+
+
+### SwitchUI
+
+```swift
+    let switchui = SwitchUI(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    switchui.switchColorOn = .brown
+    switchui.switchColorOff = .red
+    switchui.marginLeft = 10.0
+    switchui.marginRight = 10.0
+    switchui.marginTop = 10
+    switchui.marginBottom = 50
+    switchui.height = 20
+    switchui.width = 50
+    switchui.on = true
+    switchui.off = false
+    self.view.addSubview(switchui)
+```
+
+![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleSwitchUI.png)
+
