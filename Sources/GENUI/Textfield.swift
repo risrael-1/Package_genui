@@ -63,6 +63,7 @@ import UIKit
         
         self.addSubview(backgroundTextfield)
         
+        textfield.text = text
         textfield.minimumFontSize = minimumFontSize
         textfield.placeholder = placeholder
         textfield.textColor = textColor
