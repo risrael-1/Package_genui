@@ -1,7 +1,7 @@
 import UIKit
 
-@IBDesignable class RoundButtonGradient: UIButton {
-
+@IBDesignable public class RoundButtonGradient: UIButton {
+    
     let gradientLayer = CAGradientLayer()
     var backgroundImageView = UIImageView()
     
@@ -24,7 +24,7 @@ import UIKit
         super.init(coder: aDecoder)
     }
     
-    @IBInspectable var imagePosition: Int {
+    @IBInspectable public var imagePosition: Int {
         get {
             return self.position.rawValue
         }
@@ -33,21 +33,21 @@ import UIKit
         }
     }
     
-    @IBInspectable
+    @IBInspectable public
     var topGradientColor: UIColor? {
         didSet {
             setGradient(topGradientColor: topGradientColor, bottomGradientColor: bottomGradientColor)
         }
     }
     
-    @IBInspectable
+    @IBInspectable public
     var bottomGradientColor: UIColor? {
         didSet {
             setGradient(topGradientColor: topGradientColor, bottomGradientColor: bottomGradientColor)
         }
     }
     
-    @IBInspectable
+    @IBInspectable public
     var imageBackground: UIImage? {
         didSet {
             
@@ -145,7 +145,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
             self.clipsToBounds = true
@@ -156,7 +156,7 @@ import UIKit
         super.layoutSublayers(of: layer)
         gradientLayer.frame = bounds
     }
-
+    
     // MARK: - Layout
     override func layoutSubviews() {
         self.setUp()

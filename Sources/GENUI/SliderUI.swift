@@ -23,74 +23,74 @@ import UIKit
         self.setUp()
     }
     
-    @IBInspectable var minValue: Float = 0.0 {
+    @IBInspectable public var minValue: Float = 0.0 {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var maxValue: Float = 0.0 {
+    @IBInspectable public var maxValue: Float = 0.0 {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var labelDescription: String = ""{
+    @IBInspectable public var labelDescription: String = ""{
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var sliderColor: UIColor = .white {
+    @IBInspectable public var sliderColor: UIColor = .white {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var textColor: UIColor = .black {
+    @IBInspectable public var textColor: UIColor = .black {
         didSet {
             self.refreshUI()
         }
     }
     
-    @IBInspectable var marginRight: CGFloat = 0 {
+    @IBInspectable public var marginRight: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
     
-    @IBInspectable var marginTop: CGFloat = 0 {
+    @IBInspectable public var marginTop: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var marginBottom: CGFloat = 0 {
+    @IBInspectable public var marginBottom: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var marginLeft: CGFloat = 0 {
-        didSet {
-            setUp()
-        }
-    }
-
-    @IBInspectable var height: CGFloat = 200 {
+    @IBInspectable public var marginLeft: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
     
-    @IBInspectable var width: CGFloat = 0 {
+    @IBInspectable public var height: CGFloat = 200 {
+        didSet {
+            setUp()
+        }
+    }
+    
+    @IBInspectable public var width: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
     
     private func setUp() {
-            
+        
         self.subviews.forEach({ subview in
-           subview.removeFromSuperview()
+            subview.removeFromSuperview()
         })
         
         self.frame = CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.size.width, height: self.frame.size.height)

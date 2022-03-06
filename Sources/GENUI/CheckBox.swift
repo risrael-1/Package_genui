@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable class CheckBox: UIControl {
+@IBDesignable public class CheckBox: UIControl {
     
     private let imageView = UIImageView()
     
@@ -26,22 +26,22 @@ import UIKit
         super.init(coder: coder)
         self.initialSetup()
     }
-
-    @IBInspectable
+    
+    @IBInspectable public
     var isImageFill: Bool = false {
         didSet {
             initialSetup()
         }
     }
-
-    @IBInspectable
+    
+    @IBInspectable public
     var colorCheck: UIColor  = UIColor.white {
         didSet {
             initialSetup()
         }
     }
     
-    @IBInspectable
+    @IBInspectable public
     var colorUnCheck: UIColor  = UIColor.white {
         didSet {
             initialSetup()
@@ -74,7 +74,7 @@ import UIKit
     private func updateCheckedStateUI() {
         if #available(iOS 13.0, *) {
             let conf = UIImage.SymbolConfiguration(weight: .bold).applying(UIImage.SymbolConfiguration(scale: .large))
-        
+            
             if self.isChecked {
                 if self.isImageFill {
                     self.imageView.image = UIImage(systemName: "checkmark.square.fill", withConfiguration: conf)
