@@ -171,7 +171,7 @@ private func setSelectedViewController() {
 
 ![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleSwitchUI.png)
 
-### textfield
+### Textfield
 
 ```swift
         var textfield = Textfield(frame: CGRect(x: 10, y: 10, width: 300, height: 400))
@@ -188,7 +188,7 @@ private func setSelectedViewController() {
 [HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleTextfieldPlaceholder.png)
 
 
-### label
+### Label
 
 ```swift
         var label = Label(frame: CGRect(x: 10, y: 10, width: 300, height: 400))
@@ -201,7 +201,7 @@ private func setSelectedViewController() {
 
 ![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleLabel.png)
 
-### roundbuttongradient
+### RoundButtonGradient
 
 ```swift
         var button = RoundButtonGradient(frame: CGRect(x: 10, y: 10, width: 300, height: 400))
