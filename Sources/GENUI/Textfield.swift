@@ -67,6 +67,9 @@ import UIKit
         textfield.placeholder = placeholder
         textfield.textColor = textColor
         
+        textfield.frame = self.frame
+        self.addSubview(textfield)
+        
         self.superview?.addSubview(self)
     }
     
