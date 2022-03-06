@@ -13,36 +13,36 @@ import UIKit
     
     private let gradientLayer = CAGradientLayer()
     
-    @IBInspectable var cornerRadiusTopRight: Bool = false {
+    @IBInspectable public var cornerRadiusTopRight: Bool = false {
         didSet {
             setUp()
         }
     }
 
-    @IBInspectable var cornerRadiusBottomRight: Bool = false {
+    @IBInspectable public var cornerRadiusBottomRight: Bool = false {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var cornerRadiusTopLeft: Bool = false {
+    @IBInspectable public var cornerRadiusTopLeft: Bool = false {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var cornerRadiusBottomLeft: Bool = false {
+    @IBInspectable public var cornerRadiusBottomLeft: Bool = false {
         didSet {
             setUp()
         }
     }
     
-    @IBInspectable var startColor: UIColor = UIColor.black {
+    @IBInspectable public var startColor: UIColor = UIColor.black {
         didSet {
            setUp()
 
         }
     }
     
-    @IBInspectable var endColor: UIColor = UIColor.black {
+    @IBInspectable public var endColor: UIColor = UIColor.black {
         didSet {
             setUp()
         }
@@ -50,41 +50,41 @@ import UIKit
     
 
     
-    @IBInspectable var marginRight: CGFloat = 0 {
+    @IBInspectable public var marginRight: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
     
-    @IBInspectable var marginTop: CGFloat = 0 {
+    @IBInspectable public var marginTop: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var marginBottom: CGFloat = 0 {
+    @IBInspectable public var marginBottom: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var marginLeft: CGFloat = 0 {
+    @IBInspectable public var marginLeft: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
 
-    @IBInspectable var height: CGFloat = 200 {
+    @IBInspectable public var height: CGFloat = 200 {
         didSet {
             setUp()
         }
     }
     
-    @IBInspectable var width: CGFloat = 0 {
+    @IBInspectable public var width: CGFloat = 0 {
         didSet {
             setUp()
         }
     }
     
-    @IBInspectable var radiusCorner: CGFloat = 0 {
+    @IBInspectable public var radiusCorner: CGFloat = 0 {
         didSet {
             setUp()
         }
