@@ -156,4 +156,6 @@ import UIKit
         super.layoutSublayers(of: layer)
         gradientLayer.frame = bounds
     }
+
 }
+

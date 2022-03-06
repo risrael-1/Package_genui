@@ -61,6 +61,11 @@ import UIKit
         label.numberOfLines = numberOfLines
         label.textColor = textColor
         
+
+        label.frame = self.frame
+        self.addSubview(label)
+        
+
         self.superview?.addSubview(self)
     }
     
