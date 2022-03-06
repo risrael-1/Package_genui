@@ -11,7 +11,7 @@ We’ve designed the package to make it really easy to create us elements for de
 * [**Overview**](README.md)
   * [About Packages](#about-packages)
   * [About Components](#about-components)
-    * [ViewUI](#viewui
+    * [ViewUI](#viewui)
     * [StepperUI](#stepperui)
     * [SegmentedView](#segmentedview)
 
