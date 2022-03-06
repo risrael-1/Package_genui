@@ -118,7 +118,7 @@ import UIKit
         let backgroundSwitch = UIView.init(frame: self.frame)
         backgroundSwitch.backgroundColor = self.switchColor
         backgroundSwitch.clipsToBounds = true
-        backgroundSwitch.frame = CGRect(x: 0, y: 0, width:  self.frame.size.width, height: bounds.size.height)
+        backgroundSwitch.frame = CGRect(x: 0, y: 0, width:  self.frame.size.width, height: self.frame.size.height)
         
         self.addSubview(backgroundSwitch)
         
@@ -130,6 +130,8 @@ import UIKit
         label.frame = CGRect(x: 20, y: bounds.size.height / 2 - self.label.frame.size.height / 2 , width: bounds.size.width / 2, height: bounds.size.height)
         label.numberOfLines = 0
         self.addSubview(label)
+        switchui.frame =  CGRect(x: self.frame.size.width - 110, y: self.frame.size.height / 2 - 20  , width: 40, height: 40)
+        self.addSubview(switchui)
         
         self.superview?.addSubview(self)
     }

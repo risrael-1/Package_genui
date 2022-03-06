@@ -112,6 +112,8 @@ import UIKit
         label.numberOfLines = 0
         self.addSubview(label)
         
+        slider.frame = self.frame
+        
         self.superview?.addSubview(self)
     }
     
