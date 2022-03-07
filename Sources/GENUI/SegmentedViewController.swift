@@ -13,7 +13,7 @@ protocol SegmentedViewButtonDelegate: AnyObject {
 }
 
 public class SegmentedViewController: UIViewController, SegmentedViewButtonDelegate {
-
+    
     public enum Mode {
         case standAlone(color: UIColor)
         case standAloneWhite(color: UIColor)
@@ -111,9 +111,6 @@ public class SegmentedViewController: UIViewController, SegmentedViewButtonDeleg
         if let oldSelected = self.selectedViewController {
             if oldSelected === selected {
                 return
-            } else {
-                //let animationEnd = oldSelected.removeFullScreenChildFromParentViewController(animated: false)
-                //animationEnd()
             }
         }
         let animationStart = self.addFullScreenChildViewController(selected, in: self.contentView)
