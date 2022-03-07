@@ -105,7 +105,7 @@ public class SegmentedViewController: UIViewController, SegmentedViewButtonDeleg
         }
         self.setSelectedViewController(at: sender.selectedSegmentIndex)
     }
-    @objc func setSelectedViewController(at index: Int) {
+    @objc public func setSelectedViewController(at index: Int) {
         self.segmentedControl.selectedSegmentIndex = index
         let selected = self.viewControllers[index]
         if let oldSelected = self.selectedViewController {
