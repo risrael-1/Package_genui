@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SegmentedView: UIView {
+public class SegmentedView: UIView {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
