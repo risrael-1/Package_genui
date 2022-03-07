@@ -25,6 +25,6 @@ let package = Package(
         .target(
             name: "GENUI",
             dependencies: [],
-            resources: [.process("SegmentedView.xib")])
+            exclude: ["SegmentedView.xib"])
     ]
 )
