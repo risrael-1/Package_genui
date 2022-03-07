@@ -21,14 +21,6 @@ public class SegmentedViewController: UIViewController, SegmentedViewButtonDeleg
 
     weak var segmentedViewButtonDelegate: SegmentedViewButtonDelegate?
     
-    public init() {
-        super.init(nibName: "SegmentedView", bundle: Bundle(for: SegmentedView.self))
-    }
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-
     public var mode = Mode.standAlone(color: UIColor.red) {
         willSet {
             if self.isViewLoaded {
