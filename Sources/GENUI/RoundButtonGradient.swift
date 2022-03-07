@@ -57,7 +57,7 @@ import UIKit
     @IBInspectable public
     var textColor: UIColor? {
         didSet {
-            self.setTitleColor(self.textColor, for: .normal)
+            self.tintColor = self.textColor
         }
     }
     
