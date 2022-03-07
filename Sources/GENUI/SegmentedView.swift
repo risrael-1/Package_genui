@@ -17,7 +17,7 @@ public class SegmentedView: UIView {
     @IBOutlet weak var backgroundView: UIView!
 
     weak var delegate: SegmentedViewButtonDelegate?
-
+    let settingsURL = Bundle.main.url(forResource: "SegmentedView", withExtension: "xib")
     @objc func configure(with rightButtonImage: UIImage?) {
         self.rightButton.isHidden = true
         if let rightButtonImage = rightButtonImage {
