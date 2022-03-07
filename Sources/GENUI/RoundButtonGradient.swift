@@ -54,6 +54,13 @@ import UIKit
         }
     }
     
+    @IBInspectable public
+    var textColor: UIColor? {
+        didSet {
+            self.setTitleColor(self.textColor, for: .normal)
+        }
+    }
+    
     var position = RoundButtonGradient.Position.center {
         didSet {
             self.setUp()
@@ -126,6 +133,7 @@ import UIKit
         }
         
         self.backgroundImageView.image = imageBackground
+        
         self.addSubview(backgroundImageView)
     }
     
