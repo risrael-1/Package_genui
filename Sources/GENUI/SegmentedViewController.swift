@@ -14,14 +14,14 @@ protocol SegmentedViewButtonDelegate: AnyObject {
 
 public class SegmentedViewController: UIViewController, SegmentedViewButtonDelegate {
 
-    enum Mode {
+    public enum Mode {
         case standAlone(color: UIColor)
         case standAloneWhite(color: UIColor)
     }
 
     weak var segmentedViewButtonDelegate: SegmentedViewButtonDelegate?
 
-    var mode = Mode.standAlone(color: UIColor.red) {
+    public var mode = Mode.standAlone(color: UIColor.red) {
         willSet {
             if self.isViewLoaded {
                 fatalError("mode cannot be changed after view load")
@@ -29,9 +29,9 @@ public class SegmentedViewController: UIViewController, SegmentedViewButtonDeleg
         }
     }
     
-    var backgroundColor: UIColor = .white
+    public var backgroundColor: UIColor = .white
 
-    @objc var viewControllers: [UIViewController] = [] {
+    @objc  public var viewControllers: [UIViewController] = [] {
         didSet {
             if self.isViewLoaded {
                 self.setupSegmentedControl()
