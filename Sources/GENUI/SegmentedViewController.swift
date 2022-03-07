@@ -63,7 +63,7 @@ public class SegmentedViewController: UIViewController, SegmentedViewButtonDeleg
         }
     }
 
-    override func loadView() {
+    public override func loadView() {
         switch self.mode {
         case .standAlone(let color):
             super.loadView()
@@ -88,7 +88,7 @@ public class SegmentedViewController: UIViewController, SegmentedViewButtonDeleg
         }
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.setupSegmentedControl()
         if !self.viewControllers.isEmpty {
