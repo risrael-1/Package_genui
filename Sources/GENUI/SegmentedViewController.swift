@@ -12,7 +12,7 @@ protocol SegmentedViewButtonDelegate: AnyObject {
     func didPressRightButton(sender: AnyObject)
 }
 
-class SegmentedViewController: UIViewController, SegmentedViewButtonDelegate {
+public class SegmentedViewController: UIViewController, SegmentedViewButtonDelegate {
 
     enum Mode {
         case standAlone(color: UIColor)
