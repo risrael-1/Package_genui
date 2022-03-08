@@ -118,6 +118,8 @@ import UIKit
         
         switchui.tintColor = self.switchColorOff
         switchui.onTintColor = self.switchColorOn
+        switchui.isOn = self.isSelect
+        
         label.text = self.labelDescription
         label.textColor = self.textColor
         label.frame = CGRect(x: 20, y: bounds.size.height / 2 - self.label.frame.size.height / 2 , width: bounds.size.width / 2, height: bounds.size.height)
@@ -127,6 +129,10 @@ import UIKit
         self.addSubview(switchui)
         
         self.superview?.addSubview(self)
+    }
+    
+    public func getIsSelected() -> Bool {
+        return switchui.isOn
     }
     
     private func refreshUI() {
