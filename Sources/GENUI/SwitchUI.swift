@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable public class SwitchUI: UIView {
+@IBDesignable public class SwitchUI: UIControl {
     
     private let switchui = UISwitch()
     private var label = UILabel()
@@ -97,6 +97,13 @@ import UIKit
         didSet {
             setUp()
         }
+    }
+    
+    public override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        let result = super.beginTracking(touch, with: event)
+        self.isSelected.toggle()
+        self.sendActions(for: .valueChanged)
+        return result
     }
     
     @objc func switchStateDidChange(_ sender: UISwitch) {
