@@ -95,7 +95,7 @@ import UIKit
     
     public override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let result = super.beginTracking(touch, with: event)
-        self.isSelected.toggle()
+        self.isSelect.toggle()
         self.sendActions(for: .valueChanged)
         return result
     }
@@ -118,7 +118,6 @@ import UIKit
         
         switchui.tintColor = self.switchColorOff
         switchui.onTintColor = self.switchColorOn
-        switchui.isSelected = isSelect
         label.text = self.labelDescription
         label.textColor = self.textColor
         label.frame = CGRect(x: 20, y: bounds.size.height / 2 - self.label.frame.size.height / 2 , width: bounds.size.width / 2, height: bounds.size.height)
