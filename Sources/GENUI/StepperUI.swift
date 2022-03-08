@@ -162,6 +162,7 @@ import UIKit
     @objc func rightButtonValueChanged(_ sender: UIButton) {
         
         self.stepper.value += 1
+        self.value = self.stepper.value
         label.text = self.labelDescription + " \(Int(self.stepper.value))"
         
     }
@@ -169,6 +170,7 @@ import UIKit
     @objc func leftButtonValueChanged(_ sender: UIButton) {
         
         self.stepper.value -= 1
+        self.value = self.stepper.value
         label.text = self.labelDescription + " \(Int(self.stepper.value))"
         
     }
