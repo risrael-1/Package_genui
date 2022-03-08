@@ -23,13 +23,7 @@ import UIKit
         self.setUp()
     }
     
-    @IBInspectable public var on: Bool = true {
-        didSet {
-            self.refreshUI()
-        }
-    }
-    
-    @IBInspectable public var off: Bool = false {
+    public var isSelect: Bool = false {
         didSet {
             self.refreshUI()
         }
@@ -106,13 +100,6 @@ import UIKit
         return result
     }
     
-    @objc func switchStateDidChange(_ sender: UISwitch) {
-        if (sender.isOn == true) {
-            print("ON")
-        } else {
-            print("OFF")
-        }
-    }
     
     private func setUp() {
         
