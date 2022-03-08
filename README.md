@@ -13,7 +13,6 @@ We’ve designed the package to make it really easy to create us elements for de
   * [About Components](#about-components)
     * [ViewUI](#viewui)
     * [StepperUI](#stepperui)
-    * [SegmentedView](#segmentedview)
     * [CheckboxUI](#checkboxui)
     * [SliderUI](#sliderui)
     * [SwitchUI](#switchui)
@@ -66,58 +65,6 @@ You can implement the elements in the .xib like the example below
 ***
 
 ![HTPressableButton](https://github.com/risrael-1/Package_genui/blob/master/Sources/GENUI/ImagesDemo/exempleStepperUI.gif)
-
-
-### SegmentedView
-
-after adding a view in your xib, You can use this implementation for the segmentedView
-
-```swift
-enum stepSegment: Int {
-    case step1 = 0
-    case step2 = 1
-}
-
-@IBOutlet weak var view: UIView!
-
-private var segmentedViewController: SegmentedViewController!
-var selectedSegment: stepSegment = .step1
-```
-***
-
-```swift
-var viewControllers: [UIViewController?] = []
-
-let segmentedViewController = SegmentedViewController()
-
-let stepOneViewController = StepOneViewController()
-stepOneViewController.title = "step1"
-viewControllers.append(stepOneViewController)
-
-let stepTwoViewController = StepTwoViewController()
-stepTwoViewController.title = "step2"
-viewControllers.append(stepTwoViewController)
-
-
-segmentedViewController.backgroundColor = UIColor.red
-segmentedViewController.mode = .standAlone(color: UIColor.blue)
-
-segmentedViewController.viewControllers = viewControllers.compactMap{$0}
-
-let anim = self.addFullScreenChildViewController(segmentedViewController, in: self.viewTest)
-anim()
-
-self.segmentedViewController = segmentedViewController
-self.setSelectedViewController()
-
-```
-***
-
-```swift
-private func setSelectedViewController() {
-    self.segmentedViewController.setSelectedViewController(at: self.selectedSegment.rawValue)
-}
-```
 
 
 ### CheckboxUI
